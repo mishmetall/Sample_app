@@ -2,8 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 
-gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,10 +13,16 @@ end
 
 gem 'jquery-rails'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem "rspec-rails", "~> 2.6"
+  gem 'sqlite3'
 end
 
 group :test do
   gem "rspec", "~> 2.6"
+  gem 'sqlite3'
 end
