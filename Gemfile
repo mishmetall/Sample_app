@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -20,9 +19,12 @@ end
 group :development do
   gem "rspec-rails", "~> 2.6"
   gem 'sqlite3'
+  gem 'spork', '~> 0.9.0.rc'
 end
 
 group :test do
   gem "rspec", "~> 2.6"
   gem 'sqlite3'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'webrat'
 end
