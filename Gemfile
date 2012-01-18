@@ -28,4 +28,5 @@ group :test do
   gem 'sqlite3'
   gem 'spork', '~> 0.9.0.rc'
   gem 'webrat'
+  gem 'factory_girl_rails', '>= 1.1.0'
 end
