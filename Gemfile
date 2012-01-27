@@ -22,6 +22,7 @@ group :development do
   gem 'sqlite3'
   gem 'spork', '~> 0.9.0.rc'
   gem 'annotate', '~> 2.4.1.beta'
+  gem 'faker', '0.3.1'
 end
 
 group :test do
