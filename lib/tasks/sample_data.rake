@@ -14,20 +14,20 @@ end
 
 def make_users
   admin = User.create!(:name => "Example User",
-                 :email => "example@railstutorial.org",
-                 :password => "foobar",
-                 :password_confirmation => "foobar",
-                 :admin => true)
-    admin.toggle!(:admin)
-    99.times do |n|
-      name = Faker::Name.name
-      email = "example#{n+1}@gmail.com"
-      password = "password"
-      User.create!(:name => name,
-                   :email => email,
-                   :password => password,
-                   :password_confirmation => password)
-    end
+               :email => "example@railstutorial.org",
+               :password => "foobar",
+               :password_confirmation => "foobar",
+               :admin => true)
+  admin.toggle!(:admin)
+  99.times do |n|
+    name = Faker::Name.name
+    email = "example#{n+1}@gmail.com"
+    password = "password"
+    User.create!(:name => name,
+                 :email => email,
+                 :password => password,
+                 :password_confirmation => password)
+  end
 end
 
 def make_microposts
@@ -41,8 +41,8 @@ end
 def make_relationships
   users = User.all
   user  = users.first
-  following = user[1..50]
+  following = users[1..50]
   followers  = users[3..40]
-  following.each {|followed| user.follow!(followed) }
-  followers.each {|follower| follower.follow!(user) }
+  following.each { |followed| user.follow!(followed) }
+  followers.each { |follower| follower.follow!(user) }
 end
